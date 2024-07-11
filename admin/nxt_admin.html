@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Dashboard</title>
+  <!-- <link rel="stylesheet" href="/css/dash.css"> -->
+  <link rel="stylesheet" href="dash.css">
+  <style>
+      .log a:hover {
+            cursor: pointer;
+        }
+      #logoutbutton a:hover {
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar .account {
+            position: relative;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .navbar .account:hover .dropdown-content {
+            display: block;
+        }
+
+        .navbar .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="">BLW</a>
+            </div>
+            <div class="spacer"></div>
+            
+            <!-- <div class="account more log" id="logoutButton">
+                <a onclick="">More</a>
+            </div> -->
+            <div class="account">
+              <a href="#">More</a>
+              <div class="dropdown-content">
+                  <a href="dash.html">Schedule</a>
+                  <a href="http://localhost/phpmyadmin/">Database</a>
+                  <a onclick="" id="logoutButton">Log out</a>
+              </div>
+          </div>
+
+        </nav>
+    </header>
+  <div class="dashboard">
+    <h2>User Data</h2>
+    <table id="trainTable">
+      <thead>
+        <!-- <tr>
+          <th>Train Number</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+        </tr> -->
+      </thead>
+      <tbody id="trainData2">     
+          
+      </tbody>
+    </table>
+  </div>
+
+  <script src="/js/dash.js"></script>
+  <script src="../api2.js"></script>
+</body>
+</html>

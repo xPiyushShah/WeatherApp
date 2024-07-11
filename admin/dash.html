@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Dashboard</title>
+  <!-- <link rel="stylesheet" href="/css/dash.css"> -->
+  <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="main.html">BLW</a>
+            </div>
+            <div class="spacer"></div>
+            
+            <div class="account" id="book">
+                <a href="l.html">Booking</a>
+            </div>
+            <div class="account">
+                <a href="admin.html">Account</a>
+            </div>
+        </nav>
+    </header>
+  <div class="dashboard">
+    <h2>Train Schedule</h2>
+    <table id="trainTable">
+      <thead>
+        <!-- <tr>
+          <th>Train Number</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+        </tr> -->
+      </thead>
+      <tbody id="trainData">     
+          
+      </tbody>
+    </table>
+  </div>
+
+  <script src="/js/dash.js"></script>
+  <script src="../api.js"></script>
+</body>
+</html>
